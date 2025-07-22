@@ -23,9 +23,7 @@ Bookshelf App adalah aplikasi web sederhana yang memungkinkan pengguna untuk **m
 
 📦 Bookshelf-App
 ├── index.html         # Struktur halaman utama
-
 ├── style.css          # Tampilan dan layout halaman
-
 └── main.js            # Logika utama aplikasi
 
 ````
