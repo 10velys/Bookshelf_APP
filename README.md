@@ -1,37 +1,65 @@
-# Bookshelf App Starter Project
+```markdown
+# 📚 Bookshelf App
 
-Ini adalah starter project untuk siswa yang sedang mengerjakan tugas akhir kelas Belajar Membuat Front-End Web untuk Pemula.
+Bookshelf App adalah aplikasi web sederhana yang memungkinkan pengguna untuk **menambahkan**, **mengelola**, **mencari**, dan **menghapus** buku dari rak buku digital. Buku dapat dikategorikan sebagai **"Selesai dibaca"** atau **"Belum selesai dibaca"**, serta disimpan secara lokal menggunakan **localStorage** pada browser.
 
-## Ketentuan Pengerjaan Tugas
+## ✨ Fitur Utama
 
-Untuk mempermudah penilaian submission yang dikirim, Anda perlu memahami ketentuan-ketentuan berikut dalam mengerjakan tugas ini.
+- ✅ Menambahkan buku baru (judul, penulis, tahun, status selesai dibaca)
+- 🔄 Memindahkan buku antar rak: dari selesai ke belum, atau sebaliknya
+- 🔍 Mencari buku berdasarkan judul
+- 📝 Mengedit data buku
+- ❌ Menghapus buku dari rak
+- 💾 Menyimpan data buku di `localStorage` (bertahan meskipun halaman di-reload)
 
-- Anda dilarang mengedit atau menghapus atribut `data-testid` pada elemen-elemen HTML.
-- Ini masih berkaitan dengan poin sebelumnya. Jika Anda memiliki kebutuhan seperti styling elemen dan perlu menambahkan atribut seperti class, itu tidak dilarang selama atribut `data-testid` beserta nilainya tidak diubah atau dihapus.
-- Dalam menampilkan data-data buku, Anda wajib memberikan beberapa atribut pada setiap elemennya.
+## 🛠 Teknologi yang Digunakan
 
-  - `data-bookid`: menampung nilai ID masing-masing buku.
-  - `data-testid`: penanda jenis data buku yang ditampilkan. Berikut daftarnya.
-    - `bookItem`: elemen kontainer yang menampung data-data buku.
-    - `bookItemTitle`: judul buku
-    - `bookItemAuthor`: penulis buku
-    - `bookItemYear`: tahun rilis buku
-    - `bookItemIsCompleteButton`: tombol untuk mengubah kondisi buku dari “Belum selesai dibaca” menjadi “Selesai dibaca” atau sebaliknya.
-    - `bookItemDeleteButton`: tombol untuk menghapus buku.
-    - `bookItemEditButton`: tombol untuk mengubah data buku.
+- HTML5
+- CSS3 (responsive design)
+- JavaScript (DOM manipulation, event handling, localStorage)
 
-  Agar pengerjaan tugas lebih mudah, Anda dapat mengikuti templat buku berikut.
+## 📁 Struktur File
 
-```html
-<div data-bookid="{{ ID_buku }}" data-testid="bookItem">
-  <h3 data-testid="bookItemTitle">{{ judul_buku }}</h3>
-  <p data-testid="bookItemAuthor">Penulis: {{ penulis_buku }}</p>
-  <p data-testid="bookItemYear">Tahun: {{ tahun_rilis_buku }}</p>
-  <div>
-    <button data-testid="bookItemIsCompleteButton">{{ tombol_untuk_ubah_kondisi }}</button>
-    <button data-testid="bookItemDeleteButton">{{ tombol_untuk_hapus }}</button>
-    <button data-testid="bookItemEditButton">{{ tombol_untuk_edit }}</button>
-  </div>
-</div>
 ```
 
+📦 Bookshelf-App
+├── index.html         # Struktur halaman utama
+├── style.css          # Tampilan dan layout halaman
+└── main.js            # Logika utama aplikasi
+
+````
+
+## 🚀 Cara Menjalankan
+
+1. Clone atau download repository ini.
+2. Buka file `index.html` menggunakan browser modern (seperti Chrome, Firefox, Edge).
+3. Aplikasi siap digunakan tanpa backend/server tambahan.
+
+## 📸 Tampilan Aplikasi
+
+Beberapa fitur antarmuka pengguna:
+- Form tambah buku baru
+- Form pencarian buku berdasarkan judul
+- Dua rak buku: 
+  - **Belum selesai dibaca**
+  - **Selesai dibaca**
+- Tombol aksi di tiap buku: 
+  - Edit Buku
+  - Hapus Buku
+  - Pindahkan Rak
+
+## ⚙️ Catatan Teknis
+
+- Data buku disimpan dalam array objek di `localStorage` dengan struktur:
+  ```javascript
+  {
+    id: <number>,
+    title: <string>,
+    author: <string>,
+    year: <number>,
+    isComplete: <boolean>
+  }
+````
+
+* ID buku dihasilkan menggunakan timestamp: `Number(new Date())`.
+* Data diperbarui secara langsung di DOM dan `localStorage` saat user berinteraksi.
