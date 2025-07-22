@@ -1,4 +1,3 @@
-```markdown
 # 📚 Bookshelf App
 
 Bookshelf App adalah aplikasi web sederhana yang memungkinkan pengguna untuk **menambahkan**, **mengelola**, **mencari**, dan **menghapus** buku dari rak buku digital. Buku dapat dikategorikan sebagai **"Selesai dibaca"** atau **"Belum selesai dibaca"**, serta disimpan secara lokal menggunakan **localStorage** pada browser.
@@ -24,7 +23,9 @@ Bookshelf App adalah aplikasi web sederhana yang memungkinkan pengguna untuk **m
 
 📦 Bookshelf-App
 ├── index.html         # Struktur halaman utama
+
 ├── style.css          # Tampilan dan layout halaman
+
 └── main.js            # Logika utama aplikasi
 
 ````
